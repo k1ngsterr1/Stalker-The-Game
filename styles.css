@@ -1,0 +1,102 @@
+@import url('http://fonts.cdnfonts.com/css/stalker');
+@import url('http://fonts.cdnfonts.com/css/fresh-blood');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white-color: white;
+    --btn-color:  rgb(73, 73, 73, 9999);
+    --btn-hover-color: #fcfcfc;
+    --game-was-created: #989898;
+    --k1ngsterr: rgb(150, 0, 0, 0.8);
+}
+
+body{
+    font-family: 'STALKER2', sans-serif;
+    background-image: url(/images/wallpapersden.com_stalker-2_2560x1080.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+   width: 70%;
+   height: 100vh;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+
+.stalker-heading{
+    font-size: clamp(55px, 5.608333333333333vw, 200px);
+    color: white;
+    user-select: none;
+    margin-top: 50px;
+}
+
+.easy, .medium, .hard{
+    font-family: 'STALKER2', sans-serif;
+    font-size: clamp(40px, 3vw, 80px);
+    background-color: var(--btn-color);
+    opacity: 0.9;
+    user-select: none;
+    color: var(--white-color);
+    border: 2px solid black;
+    width: clamp(200px, 26.041666666666668vw, 700px);
+    border-radius:0.5208333333333334vw;
+    /* margin-top: clamp(40px ,4.6875vw, 140px); */
+    transition: 0.2s;
+}
+
+.easy:hover, .medium:hover, .hard:hover {
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+    color: var(--btn-hover-color);
+}
+
+.easy{
+     margin-top: clamp(40px ,7.6875vw, 140px); 
+}
+
+.medium{
+    margin-top: clamp(25px, 2.6875vw, 125px);
+}
+
+.hard{
+    margin-top: clamp(25px, 2.6875vw, 125px);
+}
+
+.made-by{
+    width: clamp(320px, 46.875vw, 1200px);
+    height: clamp(90px,7.8125vw, 220px);
+    margin-top: clamp(100px, 7.416666666666666vw, 300px);
+    background-image: url(/images/metal3png.png);
+    background-color: #303030;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 14px 16px rgba(0, 0, 0, 0.5);
+}
+
+.this-game-was-made-by{
+  color: var(--game-was-created);
+  padding-top: 5px;
+    user-select: none;
+  font-size: clamp(22px,1.8229166666666667vw,50px);
+}
+
+.kingsterr{
+    font-size: clamp(22px, 2.8229166666666667vw, 50px);
+    font-family: 'Fresh Blood', sans-serif;
+    text-decoration: none;
+    user-select: none;
+    color: var(--k1ngsterr);
+    font-weight: bolder;
+    margin-top: clamp(15px, 1.0416666666666667vw, 25px);
+}
+
