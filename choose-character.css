@@ -13,6 +13,7 @@
     --btn-color: rgb(73, 73, 73, 9999);
     --btn-hover-color: #fcfcfc;
     --game-was-created: #989898;
+    --white-for-btn: rgb(255, 255, 255, 0.8);
     --k1ngsterr: rgb(150, 0, 0, 0.8);
 }
 
@@ -23,7 +24,6 @@ body{
 .container{
     display: flex;
     margin: auto;
-    border: 2px solid red;
     width: 70%;
     height: 100vh;
     flex-direction: column;
@@ -41,8 +41,191 @@ body{
 
 .choose-grid{
     width: 100%;
-    height: 300px;
-    display: grid;
-    margin-top: 530px;
-    border: 2px solid blue;
+    height: clamp(900px, 39.458333333333336vw, 1200px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(100px, 0.416666666666666vw, 700px);
+    margin-bottom: clamp(100px,9.625vw,500px);
+}
+
+.vladimir, .artem, .sanya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vladimir-name, .artem-name, .sanya-name{
+    font-family: 'STALKER2', sans-serif;
+    font-weight: bold;
+    color: var(--white-color);
+    margin-top: 20px;
+    user-select: none;
+    font-size: clamp(25px,2.0833333333333335vw, 60px);
+}
+
+.face-1, .face-2, .face-3{
+    font-size: clamp(55px,5.208333333333333vw, 200px);
+    user-select: none;
+}
+
+.vladimir{
+    margin-right: clamp(100px, 7.5vw, 380px);
+    width: clamp(200px, 15.625vw, 400px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(200px, 20.833333333333332vw, 500px);
+}
+
+.sanya{
+    margin-left: clamp(100px,7.5vw,380px);
+    width: clamp(200px, 15.625vw, 400px);
+    height: clamp(200px,20.833333333333332vw,500px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artem{
+    width: clamp(200px,15.625vw,400px);
+    height: clamp(200px, 20.833333333333332vw, 500px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-btn{
+    width: clamp(80px,6.25vw,150px);
+    height: clamp(35px,2.44375vw, 50px);
+    font-size: clamp(20px,1.3020833333333333vw,30px);
+    font-family: 'STALKER2', sans-serif;
+    font-weight: 700;
+    background-color: var(--white-for-btn);
+    user-select: none;
+    border-radius: 40px;
+    margin-top: clamp(5px,0.78125vw, 20px);
+    border: 3px solid black;
+    transition: 0.2s;
+}
+
+.info-btn:hover{
+box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+background-color: rgb(255, 255, 255);
+}
+
+.select{
+    width: clamp(80px, 7.95vw, 150px);
+    height: clamp(35px, 2.44375vw, 50px);
+    font-size: clamp(20px, 1.3020833333333333vw, 30px);
+    font-family: 'STALKER2', sans-serif;
+    font-weight: 700;
+    background-color: var(--white-for-btn);
+    user-select: none;
+    border-radius: 40px;
+    margin-top: clamp(5px, 0.78125vw, 20px);
+    border: 3px solid black;
+    transition: 0.2s;
+}
+
+.select:hover{
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    background-color: rgb(255, 255, 255);
+}
+
+.artem:hover, .sanya:hover, .vladimir:hover{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: #535353;
+    transition: 0.2s;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.artem:not(:hover), .sanya:not(:hover), .vladimir:not(:hover){
+    transition: 0.2s;
+}
+
+.goback{
+    width: clamp(300px,26.041666666666668vw,700px);
+    height: clamp(100px,7.8125vw,200px);
+    font-size: clamp(30px, 3.3020833333333333vw, 50px);
+    font-family: 'STALKER2', sans-serif;
+    font-weight: 700;
+    margin-bottom: clamp(20px, 2.6041666666666665vw ,80px);
+    background-color: var(--white-for-btn);
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+.goback:hover{
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+
+.modal-content-artem{
+    width: 1200px;
+    height: 650px;
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:125px;
+    bottom: 0;
+
+
+}
+
+.close{
+    color: white;
+    font-size: 50px;
+    margin-top: 5px;
+    margin-left: 1145px;
+    transition: 0.2s;
+}
+
+.close:hover{
+    color: rgb(255, 82, 82);
+}
+
+@media only screen and (max-width: 600px){
+
+    .choose-grid{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vladimir, .sanya{
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .vladimir{
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sanya{
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .artem{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
