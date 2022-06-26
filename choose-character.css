@@ -1,7 +1,9 @@
 @import url('http://fonts.cdnfonts.com/css/stalker');
 @import url('http://fonts.cdnfonts.com/css/fresh-blood');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
 *, *::after, *::before{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,6 +17,7 @@
     --game-was-created: #989898;
     --white-for-btn: rgb(255, 255, 255, 0.8);
     --k1ngsterr: rgb(150, 0, 0, 0.8);
+    --description-text-color: rgb(182, 182, 182);
 }
 
 body{
@@ -153,6 +156,7 @@ background-color: rgb(255, 255, 255);
     font-size: clamp(30px, 3.3020833333333333vw, 50px);
     font-family: 'STALKER2', sans-serif;
     font-weight: 700;
+    user-select: none;
     margin-bottom: clamp(20px, 2.6041666666666665vw ,80px);
     background-color: var(--white-for-btn);
     transition: 0.2s;
@@ -165,12 +169,14 @@ background-color: rgb(255, 255, 255);
 }
 
 .modal-content-artem{
-    width: 1200px;
-    height: 650px;
+    width: 62.5%;
+    position: relative;
+    height: 69.18518518518518%;
     background-color: rgb(0, 0, 0, 0.8);
     border-radius: 20px;
     backdrop-filter: blur(20px);
     position: absolute;
+    visibility: hidden;
     margin-left: auto;
     display: flex;
     margin-right: auto;
@@ -178,20 +184,153 @@ background-color: rgb(255, 255, 255);
     right: 0;
     top:125px;
     bottom: 0;
+}
 
-
+.upper-content{
+    display: flex;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+    width: 100%;
 }
 
 .close{
     color: white;
-    font-size: 50px;
-    margin-top: 5px;
-    margin-left: 1145px;
+    font-size: clamp(35px,2.6041666666666665vw,70px);
+    position: fixed;
     transition: 0.2s;
+    margin-left: 57.395833333333336vw;
 }
 
 .close:hover{
     color: rgb(255, 82, 82);
+}
+
+.name-window{
+    color: white;
+    position: fixed;
+    font-family: 'STALKER2', sans-serif;
+    font-size: clamp(30px,2.5vw,56px);
+}
+
+.text-artem-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artem-text{
+    color: var(--description-text-color);
+    font-size: clamp(20px,1.5625vw,40px);
+    text-align: center;
+    margin-top: 200px;
+    overflow: hidden;
+    border-right: 0.125vw solid orange;
+    white-space: nowrap;
+width: clamp(200px,52.083333333333336vw,1500px);
+    letter-spacing: .15em;
+    line-break: auto;
+    font-family: 'Reggae One', cursive;
+    line-height: clamp(30px,2.6041666666666665vw,90px);
+    animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.dark-content{
+    width: 62.5%;
+    position: relative;
+    height: 69.18518518518518%;
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    visibility: hidden;
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 125px;
+    bottom: 0;
+}
+
+.vladimir-content {
+    width: 62.5%;
+    position: relative;
+    height: 69.18518518518518%;
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    visibility: hidden;
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 125px;
+    bottom: 0;
+}
+
+.stats{
+color: white;
+position: absolute;
+margin-top: 290px;
+}
+
+.stats-header{
+    font-family: 'Reggae One', cursive;
+    font-size: 29px;
+}
+
+.text-artem-content{
+    width:1000px;
+}
+
+.list-1{
+    list-style: none;
+    font-family: 'Reggae One', cursive;
+    font-size: 27px;
+    margin-right: 710px;
+    user-select: none;
+    margin-top: 10px;
+}
+
+.attrb-header{
+    font-family: 'Reggae One', cursive;
+        font-size: 29px;
+        color: white;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+        
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.dark{
+    margin-top: 600px;
+    width: 285px;
 }
 
 @media only screen and (max-width: 600px){
@@ -227,5 +366,13 @@ background-color: rgb(255, 255, 255);
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .close{
+    margin-left: 230px ;
+    }
+
+    .artem-text{
+        white-space: initial;
     }
 }

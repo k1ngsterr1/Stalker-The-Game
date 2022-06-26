@@ -22,19 +22,37 @@
         <div class="vladimir">
           <p class="face-1">🧔​</p>
           <p class="vladimir-name">Vladimir</p>
-          <button class="info-btn">Info</button>
+          <button
+            onclick="windowVladimirVisible()"
+            id="vladimir-info-btn"
+            class="info-btn"
+          >
+            Info
+          </button>
           <button class="select">Select</button>
         </div>
         <div class="artem">
           <p class="face-2">👨‍🦲​​</p>
-          <p class="artem-name">Artem</p>
-          <button class="info-btn">Info</button>
+          <p class="artem-name">Pavel</p>
+          <button
+            onclick="windowPavelVisible()"
+            id="pavel-info-btn"
+            class="info-btn"
+          >
+            Info
+          </button>
           <button class="select">Select</button>
         </div>
         <div class="sanya">
-          <p class="face-3">🧛​​</p>
-          <p class="sanya-name">Sanya</p>
-          <button class="info-btn">Info</button>
+          <p class="face-3">⚫​​</p>
+          <p class="sanya-name">*****</p>
+          <button
+            onclick="windowDarkVisible()"
+            id="sanya-info-btn"
+            class="info-btn"
+          >
+            Info
+          </button>
           <button class="select">Select</button>
         </div>
       </div>
@@ -42,9 +60,68 @@
         GO BACK
       </button>
     </div>
-    <div class="modal-content-artem">
-      <h1 class="name-window">Sanya</h1>
-      <ion-icon class="close" name="close"></ion-icon>
+    <!-- Pavel Window Start -->
+    <div id="pavel-window" class="modal-content-artem">
+      <div class="upper-content">
+        <p class="name-window">Pavel</p>
+        <ion-icon
+          onclick="windowPavelInvisible()"
+          id="cross"
+          class="close"
+          name="close"
+        ></ion-icon>
+        <div class="text-artem-content">
+          <p class="artem-text">
+            Из Тени в Чистое Небо всё также слышится его Зов.
+          </p>
+          <div class="stats">Damage:50</div>
+        </div>
+      </div>
     </div>
+    <!-- ***** Window Start -->
+    <div id="dark-window" class="dark-content">
+      <div class="upper-content">
+        <p class="name-window">*****</p>
+        <ion-icon
+          onclick="windowPavelInvisible()"
+          id="cross"
+          class="close"
+          name="close"
+        ></ion-icon>
+        <div class="text-artem-content">
+          <p class="artem-text">01000100 01100001 01110010 01101011 01010.</p>
+          <div class="stats">Damage:50</div>
+        </div>
+      </div>
+    </div>
+    <!-- Vladimir Start -->
+    <div id="vladimir-window" class="vladimir-content">
+      <div class="upper-content">
+        <p class="name-window">Vladimir</p>
+        <ion-icon
+          onclick="windowPavelInvisible()"
+          id="cross"
+          class="close"
+          name="close"
+        ></ion-icon>
+        <div class="text-artem-content">
+          <p class="artem-text">Володя ГОЛОВАЧ ЛЮБИТ В ПОПУ СУВАТЬ ГРАЧ С#.</p>
+          <div class="stats">
+            <h2 class="stats-header">Статистика:</h2>
+            <li class="list-1">🔪Урон: 50</li>
+            <li class="list-1">⏳Возраст: 49 лет</li>
+            <li class="list-1">❤️️Жизни: 70 HP</li>
+            <li class="list-1">💵Деньги: 200₽</li>
+            <li class="list-1">🧠Интеллект: 110 IQ</li>
+          </div>
+          <div class="attributes">
+            <h2 class="attrb-header">Аттрибуты:</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/pop-up.js"></script>
   </body>
 </html>
+
+<img src="/images/dark.webp" class="dark" />
