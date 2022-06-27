@@ -74,7 +74,7 @@ body{
     width: clamp(320px, 46.875vw, 1200px);
     height: clamp(90px,7.8125vw, 220px);
     margin-top: clamp(100px, 7.416666666666666vw, 300px);
-    background-image: url(/images/metal3png.png);
+    background-image: url(images/metal3png.png);
     background-color: #303030;
     border-radius:10px;
     display: flex;

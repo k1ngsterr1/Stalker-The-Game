@@ -277,12 +277,13 @@ width: clamp(200px,52.083333333333336vw,1500px);
 .stats{
 color: white;
 position: absolute;
-margin-top: 290px;
+margin-top:clamp(300px, 15.104166666666666vw, 480px);
 }
 
 .stats-header{
+    user-select: none;
     font-family: 'Reggae One', cursive;
-    font-size: 29px;
+    font-size: clamp(13px,1.5104166666666667vw,45px);
 }
 
 .text-artem-content{
@@ -292,16 +293,46 @@ margin-top: 290px;
 .list-1{
     list-style: none;
     font-family: 'Reggae One', cursive;
-    font-size: 27px;
-    margin-right: 710px;
+    font-size: clamp(13px,1.40625vw,40px);
+    margin-right: clamp(410px,36.979166666666664vw,1010px);
     user-select: none;
-    margin-top: 10px;
+    margin-top: clamp(5px,0.5208333333333334vw,15px);
+}
+
+.attributes{
+    position: absolute;
+    color: white;
+    margin-top: clamp(300px,15.104166666666666vw,480px);
 }
 
 .attrb-header{
+    user-select: none;
     font-family: 'Reggae One', cursive;
-        font-size: 29px;
-        color: white;
+    font-size: clamp(13px,1.5104166666666667vw,45px);
+    color: white;
+}
+
+.list-2{
+    list-style: none;
+    font-family: 'Reggae One', cursive;
+    font-size: clamp(13px,1.40625vw,41px);
+    margin-right: auto;
+    user-select: none;
+    margin-top: clamp(5px,0.5208333333333334vw,15px)
+}
+
+.weapons{
+    display: flex;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+    border: 1px solid white;
+    background-color: #474747;
+}
+
+.ak47{
+    width: clamp(100px,6.25vw,140px);
+    user-select: none;
 }
 
 @keyframes typing {
